@@ -1,3 +1,4 @@
 <launch>
-  <node name="play_sound" pkg="play_audio" type="audio_music.py"/>
+  <!-- <node name="play_sound" pkg="play_audio" type="audio_music.py"/> -->
+  <node name="play_sound" pkg="play_audio" type="audio_rail_go.py"/>
 </launch>

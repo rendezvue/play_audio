@@ -1,0 +1,3 @@
+<launch>
+  <node name="stop_sound" pkg="sound_play" type="shutup.py"/>
+</launch>

@@ -2,7 +2,7 @@
 
 import rospy
 import sys
-
+import rospkg
 from sound_play.libsoundplay import SoundClient
 
 
@@ -16,8 +16,11 @@ def play_repeat():
 
     soundhandle.stopAll()
     rospy.sleep(1)
+    
+    rospack = rospkg.RosPack()
+    wav_path = rospack.get_path('play_audio')
 
-    sound_beep = soundhandle.waveSound("/root/farmingo_ws/src/farmingo/play_audio/wav/WindowsLogon.wav")
+    sound_beep = soundhandle.waveSound(wav_path+"/wav/WindowsLogon.wav")
     sound_beep.play()
 if __name__ == '__main__':
     rospy.init_node('repeat_test')

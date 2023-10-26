@@ -17,7 +17,7 @@ def play_repeat():
     soundhandle.stopAll()
     rospy.sleep(1)
 
-    sound_beep = soundhandle.waveSound("/root/farmingo_ws/src/farmingo/play_audio/wav/tesla_seatbelt.wav")
+    sound_beep = soundhandle.waveSound(wav_path+"/wav/tesla_seatbelt.wav")
     sound_beep.stop()
     sound_beep.play()
     sound_beep.repeat()
